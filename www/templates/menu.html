@@ -1,32 +1,36 @@
 <ion-side-menus>
-
   <ion-pane ion-side-menu-content>
-    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+    <ion-nav-bar class="bar-medtrackr-menu nav-title-slide-ios7">
       <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
     </ion-nav-bar>
     <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
   </ion-pane>
 
   <ion-side-menu side="left">
-    <header class="bar bar-header bar-stable">
-      <h1 class="title">Left</h1>
+    <header class="bar bar-header bar-medtrackr-main">
+      <h1 class="title">Menu</h1>
     </header>
     <ion-content class="has-header">
       <ion-list>
-        <ion-item nav-clear menu-close href="#app/signup">
-            Sign up
+        <ion-item nav-clear menu-close href="#app/login" class="icon-left">
+            <i class='icon ion-person'></i> Sign up / Login
         </ion-item>
-        <ion-item nav-clear menu-close href="#app/signup" class="icon-left">
-            <i class='icon ion-person'></i>Login
+        <ion-item nav-clear menu-close href="#/app/reminder" class='icon-left'>
+            <i class='ion-android-reminder'></i> Reminder
+            <span class="badge badge-assertive">0</span>
+
+        </ion-item>            
+        <ion-item nav-clear menu-close href="#/app/search" class='icon-left'>
+            <i class='icon ion-ios7-search'></i> Search
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/search">
-          Search
+        <ion-item nav-clear menu-close href="#/app/tracker" class='icon-left'>
+            <i class='ion-arrow-graph-up-right icon'></i> Track your health
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/browse">
-          Browse
+        <ion-item nav-clear menu-close href="#/app/prescription" class='icon-left'>
+            <i class='icon ion-clipboard'></i> Prescription
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/playlists">
-          Playlists
+        <ion-item nav-clear menu-close href="#/app/appointment" class='icon-left'>
+            <i class='icon ion-ios7-calendar-outline'></i> Manage your doctor visit
         </ion-item>
       </ion-list>
     </ion-content>

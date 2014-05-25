@@ -1,1 +1,14 @@
 /* Empty. Add your own CSS if you like */
+.bar.bar-medtrackr-menu {
+    border-color: #C7F66F;
+    background-color: #C7F66F;
+    background-image: linear-gradient(0deg, #C7F66F, #C7F66F 50%, transparent 50%);
+    color: #FFFFFF; 
+}
+
+.bar.bar-medtrackr-main {
+    border-color: #C7F66F;
+    background-color: #C7F66F;
+    background-image: linear-gradient(0deg, #C7F66F, #C7F66F 50%, transparent 50%);
+    color: #FFFFFF; 
+}
