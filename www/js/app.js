@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -17,6 +17,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    $rootScope.doctors = [
+        {id: 1, name: 'Richard Phung', phone: '8581234567', address: '56 Burritos Way', fom: 'OD'},
+        {id: 2, name: 'Quang Nguyen', phone: '8587896541', address: '240 Monster Street', fom: 'OD'},
+        {id: 3, name: 'John Jack', phone: '8587895682', address: '5433 Swag Avenue', fom: 'OD'}
+    ];
   });
 })
 
@@ -39,6 +44,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
   
+    .state('app.doctor', {
+        url: '/doctor',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/doctor.html',
+                controller: 'DoctorCtrl'
+            }
+        }
+    })
+  
     .state('app.login', {
         url: '/login',
         views: {
@@ -47,7 +62,28 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
         }
     })
-
+  
+    .state('app.new_doctor', {
+        url: '/doctor/new',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/add_new_doctor.html',
+                controller: 'DoctorCtrl'
+            }
+        }
+    })
+  
+    .state('app.appointment', {
+        url: '/appointment',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/appointment.html',
+                controller: 'AppointmentCtrl'
+            }
+        }
+    })
+        
+    
     .state('app.browse', {
       url: "/browse",
       views: {

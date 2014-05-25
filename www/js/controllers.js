@@ -16,3 +16,18 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
+
+.controller('DoctorCtrl', function($scope, $stateParams, $rootScope, $location) {
+    $scope.doctors = $rootScope.doctors;
+    $scope.newDoc = {};
+    $scope.addNewDoctor = function() {
+        console.log($scope.newDoc);
+        $rootScope.doctors.push($scope.newDoc);
+        $scope.newDoc = {}; 
+        $location.path('/app/doctor');
+    }
+})
+
+.controller('AppointmentCtrl', function($scope, $stateParams, $rootScope) {
+    $scope.is_adding_new = false;
+})
